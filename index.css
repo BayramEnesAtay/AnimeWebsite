@@ -1,0 +1,52 @@
+#searchandbtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  
+
+}
+#searchbtn{
+  border:2px solid #de5499;
+  height:25px;
+  width: 70px;
+  border-radius: 15px;
+  font-family: Roboto;
+  color:#de5499;
+  transition: background-color 0.4s , color 0.4s;
+}
+#searchbtn:hover{
+  background-color:  #de5499;
+   cursor: pointer;
+  color:#f2ebe9;
+}
+body{
+  margin: 0px;
+}
+#topdiv{
+   background-color:#f2ebe9;
+   margin-top: 0px;
+   height: 80px;
+   padding-top: 100px;
+  
+}
+#search-bar{
+  border:2px solid #de5499;
+  border-radius: 15px;
+  height: 22px;
+  width:300px;
+}
+#search-bar:focus{
+  border:2px solid #de5499;
+ outline: none;
+}
+#bottomdiv{
+  height: calc(100vh - 180px);;
+  background-color: #eddcd9;
+
+}
+#card{
+  margin-left: 300px;
+  padding-top:50px;
+  display:inline-block;
+}
