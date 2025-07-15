@@ -41,12 +41,16 @@ body{
  outline: none;
 }
 #bottomdiv{
-  height: calc(100vh - 180px);;
+  min-height: calc(100vh - 180px);;
   background-color: #eddcd9;
 
 }
 #card{
   margin-left: 300px;
+  
   padding-top:50px;
   display:inline-block;
+}
+#btn{
+  
 }
