@@ -49,29 +49,31 @@ body{
   margin:auto;
 justify-content: center;
 }
-#card{
-  margin-left: 300px;
-  display: grid;
-  grid-template-rows: auto;
-  padding-top:50px;
-  display:inline-block;
-}
 #btndiv{
   display: inline-block;
   margin: auto;
   margin-bottom:10px;
 
 }
-#imagediv{
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: auto;
-  column-gap: 10px;
-}
-#info{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-}
 #bottomofpage{
   margin-right: 0px;
+}
+.card-overview {
+  max-width: min-content;
+  margin-left: 300px;
+  padding-top:50px;
+  display:inline-block;
+}
+
+.card-overview #details {
+  color:rgba(27, 25, 25, 0.844);
+}
+
+.card-overview [slot='footer'] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-overview img[slot="image"]{
+  width:100%;
 }
