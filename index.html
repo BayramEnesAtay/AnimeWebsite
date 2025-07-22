@@ -1,9 +1,13 @@
 <html>
   <head lang="tr">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+
     <meta charset="utf-8">
     <title>MyAnimeList</title>
     <link rel="stylesheet" href="index.css">
-    <script src="practice.js"></script>
+    <script src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -11,19 +15,38 @@
   </head>
 
   <body>
-    <div id="topdiv">
-      <div id="searchandbtn">
-      <input id="search-bar" type="search" placeholder="Looking for something specific?">
-      <button id="searchbtn">Search</button>
-      </div>
-    </div>
+    <template id="anime-cards">
+      <sl-card class="card-overview">
+        <img
+          slot="image"
+          src=""
+          alt=""
+        />
+
+        <strong></strong><br />
+        <br />
+        <sl-details summary="The Story" id="details"></sl-details>
+        <footer slot="footer">
+        <sl-button variant="primary" pill>More Info</sl-button>
+        <sl-rating></sl-rating>
+        </footer>
+      </sl-card>
+    </template>
+
+    <header id="topdiv">
+      <section id="searchandbtn">
+        <form>
+          <input id="search-bar" type="search" placeholder="Looking for something specific?">
+          <button id="searchbtn">Search</button>
+        </form>
+        
+      </section>
+    </header>
     
-    <div id="bottomdiv">
-     
+    <main id="bottomdiv">
+  
       
-    </div>
-    <div id="btndiv">
-      
-    </div>
+    </main>
+    
   </body>
 </html>
