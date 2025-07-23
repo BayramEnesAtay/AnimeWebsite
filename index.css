@@ -17,7 +17,7 @@
 }
 #searchbtn:hover{
   background-color:  #de5499;
-   cursor: pointer;
+  cursor: pointer;
   color:#f2ebe9;
 }
 body{
@@ -53,6 +53,7 @@ justify-content: center;
   display: inline-block;
   margin: auto;
   margin-bottom:10px;
+  
 
 }
 #bottomofpage{
