@@ -1,0 +1,32 @@
+#image{
+  display: block;
+  width: 100%;
+  height:auto;
+  margin: 0;
+}
+html{
+  margin: 0;
+  background-color:#1F1F1F;
+}
+.subNav{
+  list-style: none;
+  display:flex ;
+  flex-direction: row;
+  gap:20px;
+  background-color: rgb(58, 58, 170);
+  
+}
+.selected{
+  color:white;
+  font-size: 15px;
+  padding: 10px;
+  font-family: Roboto Mono;
+}
+#title{
+  color:white;
+  font-family:Bitcount Prop Single;
+}
+#alttitle{
+  color:#676767;
+  font-family:Bitcount Prop Single;
+}
