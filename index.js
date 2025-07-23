@@ -15,8 +15,10 @@ fetch(url)
       let score=anime.score;
       let name=anime.title;
       let the_story=anime.synopsis;
-      clonethecards(image,name,name,the_story,score);
-
+      let id=anime.mal_id;
+      
+      clonethecards(image,name,name,the_story,score,id);
+      
     });
     let btndiv=document.createElement("footer");
     btndiv.id="btndiv";
@@ -113,7 +115,7 @@ function list_theseries(i)
     });
 }
 
-function clonethecards(imageURL,alttext,animename,description,score)
+function clonethecards(imageURL,alttext,animename,description,score,id)
 {
   const template=document.querySelector("#anime-cards");
   const clone=template.content.cloneNode(true);
@@ -123,6 +125,6 @@ function clonethecards(imageURL,alttext,animename,description,score)
   clone.querySelector("strong").textContent=animename;
   clone.querySelector("#details").textContent=description;
   clone.querySelector("sl-rating").textContent=score;
-
+  clone.querySelector(".linktoinfo").href=`moreinfo.html?id=${id}`;
   document.querySelector("#bottomdiv").appendChild(clone);
 }
