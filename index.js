@@ -14,7 +14,7 @@ fetch(url)
       let name=anime.title;
       let theStory=anime.synopsis;
       let id=anime.mal_id;
-      clonethecards(image,name,name,theStory,score,id);
+      clonethecards(image,name,id);
     });
     let btndiv=document.createElement("footer");
     btndiv.id="btndiv";
@@ -62,7 +62,8 @@ function listTheseries(i)
         let score=anime.score;
         let name=anime.title;
         let theStory=anime.synopsis;
-        clonethecards(image,name,name,theStory,score);
+        let id=anime.mal_id;
+        clonethecards(image,name,id);
       });
       let btndiv=document.createElement("footer");
       btndiv.id="btndiv";
@@ -94,15 +95,14 @@ function listTheseries(i)
       }
     });
 }
-function clonethecards(imageURL,alttext,animename,description,score,id)
+function clonethecards(imageURL,animename,id)
 {
   const template=document.querySelector("#anime-cards");
   const clone=template.content.cloneNode(true);
   clone.querySelector("img").src=imageURL;
-  clone.querySelector("img").alt=alttext;
-  clone.querySelector("strong").textContent=animename;
-  clone.querySelector("#details").textContent=description;
-  clone.querySelector("sl-rating").textContent=score;
-  clone.querySelector(".linktoinfo").href=`moreinfo.html?id=${id}`;
+  clone.querySelector(".linktoinfo").href=`moreinfo?id=${id}`;
+  clone.querySelector("#name").textContent=animename;
+  clone.querySelector("#name").href=`moreinfo?id=${id}`;
   document.querySelector("#bottomdiv").appendChild(clone);
+  console.log(id);
 }
