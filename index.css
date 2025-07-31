@@ -42,7 +42,7 @@ body{
 }
 #bottomdiv{
   min-height: calc(100vh - 180px);
-  background-color: #eddcd9;
+  background-color: #11161d;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(auto-fit, 230px);
@@ -67,12 +67,38 @@ body{
   flex-direction: column;
   row-gap: 10px;
   flex-wrap: wrap;
+  position: relative;
+}
+#card-div .tooltiptext{
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  visibility: hidden;
+  width: 120px;
+  background-color: #384b5e;
+  color: #fff;
+  border-radius: 6px;
+  top:5px;
+  left:  90%;
+  z-index: 2;
+  width:250px;
+  height:150px;
+  margin: 0px;
 }
 #image{
   width: 185px;
   height: 265px;
   border-radius: 7px;
+  z-index: 1;
 }
 #name{
   text-decoration: none;
+}
+#card-div:hover .tooltiptext{
+  visibility: visible;
+}
+.info{
+  margin-left: 20px;
+  margin-top: 5px;
+  padding: 0px;
 }
