@@ -14,7 +14,9 @@ fetch(url)
       let name=anime.title;
       let theStory=anime.synopsis;
       let id=anime.mal_id;
-      clonethecards(image,name,id);
+      let producers=anime.producers;
+      let source =anime.source;
+      clonethecards(image,name,id,type,episodes,score,producers,source);
     });
     let btndiv=document.createElement("footer");
     btndiv.id="btndiv";
@@ -63,7 +65,9 @@ function listTheseries(i)
         let name=anime.title;
         let theStory=anime.synopsis;
         let id=anime.mal_id;
-        clonethecards(image,name,id);
+        let producers=anime.producers;
+        let source =anime.source;
+        clonethecards(image,name,id,type,episodes,score,producers,source);
       });
       let btndiv=document.createElement("footer");
       btndiv.id="btndiv";
@@ -95,7 +99,7 @@ function listTheseries(i)
       }
     });
 }
-function clonethecards(imageURL,animename,id)
+function clonethecards(imageURL,animename,id,type,episodes,score,producers,source)
 {
   const template=document.querySelector("#anime-cards");
   const clone=template.content.cloneNode(true);
@@ -103,6 +107,10 @@ function clonethecards(imageURL,animename,id)
   clone.querySelector(".linktoinfo").href=`moreinfo?id=${id}`;
   clone.querySelector("#name").textContent=animename;
   clone.querySelector("#name").href=`moreinfo?id=${id}`;
+  clone.querySelector("#info1").textContent="Source: "+source;
+  clone.querySelector("#info2").textContent= type+" • "+episodes+" episodes";
+  clone.querySelector("#info3").textContent="Score: "+score;
+  clone.querySelector("#info4").textContent=
   document.querySelector("#bottomdiv").appendChild(clone);
   console.log(id);
 }
