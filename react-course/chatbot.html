@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      //this is the JSX
+      //to create a component you must use function.
+
+      function ChatInput()
+      {
+        return (
+          <>
+            <input placeholder="Send a message to Chatbot" size="30" />
+            <button>Send</button>
+          </>
+        );
+      }
+
+      function ChatMessage()
+      {
+        return (
+          <>
+            hello Chatbot
+            <img src="image/user.png" size="50px" />
+          </>
+        );
+      }
+
+      //{ChatInput()}
+      //with fragment we can group our elements with no extra div.
+      const app=(
+        <>
+          <ChatInput />
+          <ChatMessage />
+        </>
+      );
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(app);
+    </script>
+  </body>
+</html>
